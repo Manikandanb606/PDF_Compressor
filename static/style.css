@@ -1,0 +1,1086 @@
+/* =====================================================
+   PDF TOOLKIT - MAIN DESIGN
+   ===================================================== */
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f6f7fb;
+
+    color: #1f2937;
+
+}
+
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+
+.site-header {
+
+    width: 100%;
+
+    height: 72px;
+
+    background: #ffffff;
+
+    border-bottom:
+        1px solid #e8eaf0;
+
+}
+
+
+.header-container {
+
+    width: 1120px;
+
+    max-width:
+        calc(100% - 40px);
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+
+/* BRAND */
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: #111827;
+
+}
+
+
+.brand-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 9px;
+
+    background: #4c5ab0;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.brand-name {
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+}
+
+
+.brand-subtitle {
+
+    font-size: 10px;
+
+    color: #8b93a7;
+
+    margin-top: 2px;
+
+}
+
+
+
+/* NAVIGATION */
+
+
+.main-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.nav-link {
+
+    padding:
+        9px 13px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    color: #687083;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        .2s ease;
+
+}
+
+
+.nav-link:hover {
+
+    background: #f1f2f8;
+
+    color: #4c5ab0;
+
+}
+
+
+.nav-link.active {
+
+    background: #eef0ff;
+
+    color: #4c5ab0;
+
+}
+
+
+
+/* =====================================================
+   MAIN
+   ===================================================== */
+
+
+.main-content {
+
+    width: 100%;
+
+    max-width: 1120px;
+
+    margin: auto;
+
+    padding:
+        55px 20px 70px;
+
+}
+
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+
+.hero-section {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin:
+        0 auto 35px;
+
+}
+
+
+.hero-badge {
+
+    display: inline-block;
+
+    padding:
+        6px 11px;
+
+    border-radius: 20px;
+
+    background: #eef0ff;
+
+    color: #4c5ab0;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 13px;
+
+}
+
+
+.hero-section h1 {
+
+    margin: 0;
+
+    font-size: 38px;
+
+    line-height: 1.15;
+
+    letter-spacing: -1px;
+
+    color: #111827;
+
+}
+
+
+.hero-section h1 span {
+
+    color: #4c5ab0;
+
+}
+
+
+.hero-description {
+
+    margin:
+        13px auto 0;
+
+    max-width: 570px;
+
+    color: #737b8e;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* =====================================================
+   COMPRESS CARD
+   ===================================================== */
+
+
+.compress-card {
+
+    width: 760px;
+
+    max-width: 100%;
+
+    margin: auto;
+
+    background: #ffffff;
+
+    border:
+        1px solid #e5e7ef;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 12px 35px rgba(31, 41, 55, .06);
+
+}
+
+
+.card-header {
+
+    text-align: center;
+
+    margin-bottom: 22px;
+
+}
+
+
+.card-header h2 {
+
+    margin: 0;
+
+    font-size: 20px;
+
+    color: #202637;
+
+}
+
+
+.card-header p {
+
+    margin:
+        7px 0 0;
+
+    color: #858c9c;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =====================================================
+   DROP ZONE
+   ===================================================== */
+
+
+.drop-zone {
+
+    min-height: 225px;
+
+    border:
+        2px dashed #b8bee7;
+
+    border-radius: 12px;
+
+    background: #fafaff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        .2s ease;
+
+}
+
+
+.drop-zone:hover,
+.drop-zone.dragover {
+
+    background: #f4f5ff;
+
+    border-color: #4c5ab0;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+
+/* UPLOAD ICON */
+
+
+.upload-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: #eef0ff;
+
+    color: #4c5ab0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+}
+
+
+.upload-icon span {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+
+.drop-title {
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #303746;
+
+}
+
+
+.drop-subtitle {
+
+    margin-top: 5px;
+
+    color: #8a91a2;
+
+    font-size: 12px;
+
+}
+
+
+.select-btn {
+
+    margin-top: 15px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    background: #4c5ab0;
+
+    color: #ffffff;
+
+    padding:
+        10px 18px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.select-btn:hover {
+
+    background: #3f4c9c;
+
+}
+
+
+.file-info {
+
+    margin-top: 10px;
+
+    min-height: 16px;
+
+    color: #596174;
+
+    font-size: 12px;
+
+}
+
+
+
+/* =====================================================
+   CONTROLS
+   ===================================================== */
+
+
+.compression-controls {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+    gap: 20px;
+
+}
+
+
+.control-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #4a5262;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.size-control {
+
+    display: flex;
+
+}
+
+
+.size-input {
+
+    width: 115px;
+
+    height: 40px;
+
+    border:
+        1px solid #d9ddea;
+
+    border-right: 0;
+
+    border-radius:
+        7px 0 0 7px;
+
+    padding:
+        0 12px;
+
+    font-size: 14px;
+
+    outline: none;
+
+}
+
+
+.size-input:focus {
+
+    border-color: #4c5ab0;
+
+}
+
+
+.unit-select {
+
+    width: 70px;
+
+    height: 40px;
+
+    border:
+        1px solid #d9ddea;
+
+    border-radius:
+        0 7px 7px 0;
+
+    background: #ffffff;
+
+    font-size: 13px;
+
+    outline: none;
+
+}
+
+
+
+/* BUTTONS */
+
+
+.action-buttons {
+
+    display: flex;
+
+    gap: 9px;
+
+}
+
+
+.compress-btn {
+
+    height: 40px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    padding:
+        0 21px;
+
+    background: #4c5ab0;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.compress-btn:hover {
+
+    background: #3f4c9c;
+
+}
+
+
+.compress-btn:disabled {
+
+    opacity: .55;
+
+    cursor: wait;
+
+}
+
+
+.clear-btn {
+
+    height: 40px;
+
+    border:
+        1px solid #d9ddea;
+
+    border-radius: 7px;
+
+    padding:
+        0 17px;
+
+    background: #ffffff;
+
+    color: #596174;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.clear-btn:hover {
+
+    background: #f5f6fa;
+
+}
+
+
+
+/* =====================================================
+   PROGRESS
+   ===================================================== */
+
+
+.progress-area {
+
+    margin-top: 25px;
+
+}
+
+
+.progress-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+
+    font-size: 12px;
+
+    color: #697184;
+
+}
+
+
+.progress-track {
+
+    height: 8px;
+
+    background: #e8eaf0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+.progress-bar {
+
+    width: 0;
+
+    height: 100%;
+
+    background: #4c5ab0;
+
+    transition:
+        width .25s ease;
+
+}
+
+
+
+/* =====================================================
+   RESULT
+   ===================================================== */
+
+
+.result {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    background: #f5faf9;
+
+    border:
+        1px solid #c9e6df;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+.download-link {
+
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding:
+        9px 18px;
+
+    border-radius: 6px;
+
+    background: #008f83;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =====================================================
+   ERROR
+   ===================================================== */
+
+
+.error {
+
+    margin-top: 20px;
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    background: #fff5f5;
+
+    border:
+        1px solid #f0c4c4;
+
+    color: #a11;
+
+    text-align: center;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =====================================================
+   INFO CARDS
+   ===================================================== */
+
+
+.info-section {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    max-width: 760px;
+
+    margin:
+        30px auto 0;
+
+}
+
+
+.info-card {
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #e7e9f0;
+
+    border-radius: 11px;
+
+}
+
+
+.info-icon {
+
+    color: #4c5ab0;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.info-card h3 {
+
+    margin:
+        10px 0 5px;
+
+    font-size: 14px;
+
+}
+
+
+.info-card p {
+
+    margin: 0;
+
+    color: #80889a;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+
+.site-footer {
+
+    background: #ffffff;
+
+    border-top:
+        1px solid #e8eaf0;
+
+}
+
+
+.footer-container {
+
+    width: 1120px;
+
+    max-width:
+        calc(100% - 40px);
+
+    min-height: 65px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #8a91a2;
+
+    font-size: 11px;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 18px;
+
+}
+
+
+.footer-links a {
+
+    color: #737b8e;
+
+    text-decoration: none;
+
+}
+
+
+.footer-links a:hover {
+
+    color: #4c5ab0;
+
+}
+
+
+
+/* =====================================================
+   UTILITY
+   ===================================================== */
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+
+@media (max-width: 700px) {
+
+
+    .site-header {
+
+        height: auto;
+
+    }
+
+
+    .header-container {
+
+        padding:
+            13px 0;
+
+        flex-direction: column;
+
+        gap: 13px;
+
+    }
+
+
+    .main-nav {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .main-content {
+
+        padding-top: 35px;
+
+    }
+
+
+    .hero-section h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .compress-card {
+
+        padding: 20px;
+
+    }
+
+
+    .compression-controls {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .action-buttons {
+
+        width: 100%;
+
+    }
+
+
+    .compress-btn,
+    .clear-btn {
+
+        flex: 1;
+
+    }
+
+
+    .info-section {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .footer-container {
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        padding:
+            15px 0;
+
+    }
+
+}
